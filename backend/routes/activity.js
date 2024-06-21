@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const router = express.Router();
-
+require('dotenv').config()
 const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
@@ -10,7 +10,7 @@ const MERCHANT = mongoose.model("MERCHANT");
 const PRODUCT = mongoose.model("PRODUCT");
 const ORDERS = mongoose.model("ORDERS");
 
-const { Jwt_secret } = require("../keys");
+const Jwt_secret  = process.env.Jwt_secretw;
 const requireLogin = require("../middleWares/requireLogin");
 
 router.get("/allProducts", (req, res) => {

@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const router = express.Router()
-
+require('dotenv').config()
 const bcryptjs = require('bcryptjs');
 const jwt = require("jsonwebtoken")
 
@@ -11,7 +11,7 @@ const jwt = require("jsonwebtoken")
 const USER = mongoose.model("USER")
 
 
-const {Jwt_secret} = require("../keys");
+const Jwt_secret = process.env.Jwt_secret;
 const requireLogin = require('../middleWares/requireLogin')
 
 
@@ -60,7 +60,6 @@ router.post("/signup" , (req,res)=> {
 
 router.post("/signin" , (req , res) => {
     const {email , password} = req.body;
-
     if(!email || !password){
         return res.status(422).json({error: "please add all the fields"})
     }

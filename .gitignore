@@ -6,6 +6,7 @@ backend/.env
 logs
 *.log
 npm-debug.log*
+.gitignore
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*

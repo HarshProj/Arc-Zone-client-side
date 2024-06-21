@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Global-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-main{
+    width: 100%;
+    height: 90vh;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    /* opacity: 0.1; */
+}
+.about-bg{
+    position: absolute; 
+            /* height: 100%;  */
+            background-repeat: no-repeat;
+            width: 100%; 
+            background: url("https://res.cloudinary.com/dls0mpbjp/image/upload/v1707985157/sponline_phone114_generated_bokh6v.jpg");
+            background-size: cover; 
+            background-position: center; 
+            filter: blur(10px); 
+            z-index: -1; 
+}
+.aboutBox1{
+    width: 49%;
+    height: 89vh;
+    /* border: 1px solid red; */
+
+}
+
+
+.aboutBox2{
+    width: 49%;
+    height: 89vh;
+    /* border: 1px solid rgb(1, 255, 86); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about-photo{
+    /* border: 1px solid rgb(44, 0, 240); */
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Arow1{
+    width: 90%;
+    height: 35vh;
+    /* border: 1px solid rgb(44, 0, 240); */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Aphoto1{
+    margin-right: 50px;
+    width: 35%;
+    height: 35vh;
+    /* border: 1px solid rgb(210, 9, 255); */
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.Aphoto1 :hover{
+    transform: translateY(-10px)
+}
+
+
+.Aphoto1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}   
+
+.Arow2{
+    width: 90%;
+    height: 35vh;
+    /* border: 1px solid rgb(44, 0, 240); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.hover-button {
+    margin-top: 28px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 21px 115px;
+    font-size: 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-button:hover {
+    background-color: #fefffe; /* Change background color on hover */
+    color: black;
+    transform: translateY(-10px) ; /* Move button slightly up on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Change box shadow on hover */
+}
+
+.aboutBox1{
+    text-align: center;
+}
+.aboutBox1 h1{
+   margin-top: 177px;
+    font-size: 100px;
+    color: #000000;
+}
+
+.aboutBox1 p{
+    margin-top: 65px;
+    font-size: 22px;
+    color: #0b0b0b;
+}
+
+
+.img-aphoto-hover{
+    transition: all 0.3s ease-in-out;
+}
+.img-aphoto-hover :hover{
+    transform: translateY(-10px);
+}
