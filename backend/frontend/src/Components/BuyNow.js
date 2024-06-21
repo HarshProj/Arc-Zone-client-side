@@ -48,7 +48,7 @@ function BuyNow() {
   useEffect(() => {
     const getproduct = async () => {
       const response1 = await fetch(
-        `http://localhost:5000/getproduct/${productid}`
+        `/getproduct/${productid}`
       );
       if (!response1.ok) {
         throw new Error("Network response was not ok");
@@ -57,7 +57,7 @@ function BuyNow() {
 
 
 
-      const response2 = await fetch("http://localhost:5000/getuser", {
+      const response2 = await fetch("/getuser", {
         method: "get",
         headers: {
           "Content-Type": "application/json",
@@ -77,7 +77,7 @@ function BuyNow() {
       setProduct(jsonData);
       setMId(jsonData.postedBy);
 
-      fetch(`http://localhost:5000/getmerchant/${jsonData.postedBy}`, {
+      fetch(`/getmerchant/${jsonData.postedBy}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -131,7 +131,7 @@ function BuyNow() {
           size: size
         };
         const response = await fetch(
-          `http://localhost:5000/customerorder/${merchantId}`,
+          `/customerorder/${merchantId}`,
           {
             method: "PUT",
             headers: {
@@ -156,7 +156,7 @@ function BuyNow() {
   };
 
   const registerOrder = () => {
-    fetch("http://localhost:5000/orders", {
+    fetch("/orders", {
       method: "post",
       headers: {
         "Content-Type": "application/json",

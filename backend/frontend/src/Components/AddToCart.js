@@ -15,7 +15,7 @@ function AddToCart() {
 
 
   const removeProductFromUserCart = (productId) => {
-    fetch(`http://localhost:5000/removetousercart/${productId}`, {
+    fetch(`/removetousercart/${productId}`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -31,7 +31,7 @@ function AddToCart() {
 
 
   const getUser = async () => {
-    const response2 = await fetch("http://localhost:5000/getuser", {
+    const response2 = await fetch("/getuser", {
       method: "get",
       headers: {
         "Content-Type": "application/json",
@@ -62,7 +62,7 @@ function AddToCart() {
 
   const fetchProductDetails = async () => {
     try {
-      const response = await fetch('http://localhost:5000/getcartitems', {
+      const response = await fetch('/getcartitems', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

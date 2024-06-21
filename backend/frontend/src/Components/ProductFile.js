@@ -13,7 +13,7 @@ function ProductFile() {
   const isProductInCart = user && user.cart && user.cart.includes(productid);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/getproduct/${productid}`, {
+    fetch(`/getproduct/${productid}`, {
       headers: {
 
         "Content-Type": "application/json"

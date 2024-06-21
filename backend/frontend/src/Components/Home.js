@@ -19,7 +19,7 @@ export default function Home() {
     }
 
 
-    fetch("http://localhost:5000/allProducts", {
+    fetch("/allProducts", {
         headers: {
             "Authorization": "Bearer " + localStorage.getItem("jwt")
         },
